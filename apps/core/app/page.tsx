@@ -1,9 +1,15 @@
-import Link from "next/link";
+import { products } from "@microfrontend/networking";
 
-export default function Page() {
+import Card from "@/app/card";
+import Items from "@/app/items";
+
+export default async function Page() {
+  const allProductsAvailable = await products();
+
   return (
     <main>
-      <Link href="http://localhost:3001">Navigate to octoverse</Link>
+      <Card />
+      <Items products={allProductsAvailable} />
     </main>
   );
 }
