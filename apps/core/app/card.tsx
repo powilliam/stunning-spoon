@@ -14,7 +14,7 @@ export default function Card() {
 
   const onNavigateToCheckout = useCallback(() => {
     const url = new URL(
-      process.env.NEXT_PUBLIC_CHECKOUT_FRONTEND_URL as string
+      `${process.env.NEXT_PUBLIC_OCTOVERSE_FRONTEND_URL}/checkout`
     );
 
     for (const id of identifiers) {
