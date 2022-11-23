@@ -1,5 +1,5 @@
 $ next build
-warn  - You have enabled experimental feature (appDir) in next.config.js.
+warn  - You have enabled experimental features (appDir, transpilePackages) in next.config.js.
 warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
 info  - Thank you for testing `appDir` please leave your feedback at https://nextjs.link/app-feedback
 
@@ -8,24 +8,24 @@ info  - Compiled successfully
 info  - Linting and checking validity of types...
 info  - Collecting page data...
 info  - Generating static pages (0/3)
-(node:17589) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
+(node:19727) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
 (Use `node --trace-warnings ...` to show where the warning was created)
 info  - Generating static pages (3/3)
 info  - Finalizing page optimization...
 
 Route (app)                                Size     First Load JS
 ─ ○ /                                      0 B                0 B
-+ First Load JS shared by all              68.8 kB
++ First Load JS shared by all              68.9 kB
   ├ chunks/50-196fd2d8183b12a9.js          66.4 kB
   ├ chunks/main-app-3554fade52fb1f3e.js    253 B
-  └ chunks/webpack-23701e5bacce31e3.js     2.15 kB
+  └ chunks/webpack-9e541e42ce3d9c0c.js     2.21 kB
 
 Route (pages)                              Size     First Load JS
-─ ○ /404                                   210 B          86.6 kB
-+ First Load JS shared by all              86.4 kB
+─ ○ /404                                   210 B          86.7 kB
++ First Load JS shared by all              86.5 kB
   ├ chunks/main-57696a25815f0289.js        84 kB
   ├ chunks/pages/_app-0273e70f0ecc9a01.js  240 B
-  └ chunks/webpack-23701e5bacce31e3.js     2.15 kB
+  └ chunks/webpack-9e541e42ce3d9c0c.js     2.21 kB
 
 ○  (Static)  automatically rendered as static HTML (uses no initial props)
 

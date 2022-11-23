@@ -1,3 +1,7 @@
+const withTranspile = require("next-transpile-modules")([
+  "@microfrontend/networking",
+]);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -8,4 +12,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withTranspile(nextConfig);

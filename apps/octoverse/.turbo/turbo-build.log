@@ -7,12 +7,12 @@ info  - Creating an optimized production build...
 info  - Compiled successfully
 info  - Linting and checking validity of types...
 info  - Collecting page data...
-info  - Generating static pages (0/3)
-info  - Generating static pages (3/3)
+info  - Generating static pages (0/2)
+info  - Generating static pages (2/2)
 info  - Finalizing page optimization...
 
 Route (app)                                Size     First Load JS
-─ ○ /                                      0 B                0 B
+─ λ /                                      0 B                0 B
 + First Load JS shared by all              68.7 kB
   ├ chunks/50-9c0266b7b334d739.js          66.4 kB
   ├ chunks/main-app-3554fade52fb1f3e.js    253 B
@@ -25,5 +25,6 @@ Route (pages)                              Size     First Load JS
   ├ chunks/pages/_app-0273e70f0ecc9a01.js  240 B
   └ chunks/webpack-8074fabf81ca3fbd.js     2.1 kB
 
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ○  (Static)  automatically rendered as static HTML (uses no initial props)
 

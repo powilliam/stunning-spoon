@@ -1,6 +1,7 @@
-import { notFound } from "next/navigation";
 import { product } from "@microfrontend/networking";
 import Image from "next/image";
+
+export const revalidate = 0;
 
 interface PageProps {
   readonly searchParams: Record<string, any>;
@@ -14,14 +15,11 @@ const formatter = Intl.NumberFormat("en-us", {
 export default async function Page({
   searchParams: { identifiers },
 }: PageProps) {
-  if (!identifiers) {
-    notFound();
-  }
-
   const products = await Promise.all(
-    (typeof identifiers === "string" ? identifiers.split("") : identifiers).map(
-      (identifier: string) => product(identifier)
-    )
+    (typeof identifiers === "string"
+      ? identifiers.split("")
+      : identifiers || []
+    ).map((identifier: string) => product(identifier))
   );
 
   const total = products.reduce((total, product) => total + product.price, 0);
