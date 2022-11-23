@@ -13,7 +13,9 @@ export default function Card() {
   const { price, identifiers } = useContext(CardContext);
 
   const onNavigateToCheckout = useCallback(() => {
-    const url = new URL(process.env.CHECKOUT_FRONTEND_URL as string);
+    const url = new URL(
+      process.env.NEXT_PUBLIC_CHECKOUT_FRONTEND_URL as string
+    );
 
     for (const id of identifiers) {
       url.searchParams.append("identifiers", `${id}`);
